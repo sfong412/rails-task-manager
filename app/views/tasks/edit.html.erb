@@ -1,0 +1,10 @@
+<h1>Edit task</h1>
+<%= simple_form_for(@task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%= f.check_box :completed %>
+  <%= f.label :completed, "The task is completed" %>
+  <%= f.submit %>
+<% end %>
+
+<p><%= link_to 'Back to', task_path(@task.id) %></p>
